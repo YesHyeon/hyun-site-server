@@ -13,6 +13,7 @@ const server = http.createServer(function (req, res) {
       // end 함수의 첫번째 인자에는 string값이 들어가야함
       res.end(products);
     } else if (method === "POST") {
+      res.end("생성 되었습니다.");
     }
   }
 });
