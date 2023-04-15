@@ -37,7 +37,7 @@ app.get('/gallery', async (req, res) => {
   console.log('QUERY :', query);
   res.send({
     jejudo: [
-      { name: 'Jejudo', imgUrl: '../../images/gallery/jejudo1.jpeg' },
+      { name: 'Jejudo', imgUrl: require('../../images/gallery/jejudo1.jpeg') },
       { name: 'Jejudo', imgUrl: '../../images/gallery/jejudo8.jpeg' },
       { name: 'Jejudo', imgUrl: '../../images/gallery/jejudo3.jpeg' },
       { name: 'Jejudo', imgUrl: '../../images/gallery/jejudo4.jpeg' },
@@ -255,5 +255,5 @@ app.get('/gallery/:id', async (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log('현 포트폴리오 사이튼 서버가 돌아가고 있습니다.');
+  console.log('현 포트폴리오 사이트 서버가 돌아가고 있습니다.');
 });
