@@ -37,7 +37,7 @@ app.get('/gallery', async (req, res) => {
   console.log('QUERY :', query);
   res.send({
     jejudo: [
-      { name: 'Jejudo', imgUrl: require('../../images/gallery/jejudo1.jpeg') },
+      { name: 'Jejudo', imgUrl: '../../images/gallery/jejudo1.jpeg' },
       { name: 'Jejudo', imgUrl: '../../images/gallery/jejudo8.jpeg' },
       { name: 'Jejudo', imgUrl: '../../images/gallery/jejudo3.jpeg' },
       { name: 'Jejudo', imgUrl: '../../images/gallery/jejudo4.jpeg' },
