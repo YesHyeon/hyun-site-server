@@ -3,39 +3,31 @@ const cors = require('cors');
 const app = express();
 const port = 8082;
 const mysql = require('mysql');
-const conn = {
-  // mysql 접속 설정
-  host: 'localhost',
-  port: '5000',
-  user: 'user',
-  password: 'pw',
-  database: 'monolithic',
-};
-var connection = mysql.createConnection(conn); // DB 커넥션 생성
-connection.connect(); // DB 접속
+// const conn = {
+//   // mysql 접속 설정
+//   host: 'localhost',
+//   port: '5000',
+//   user: 'user',
+//   password: 'pw',
+//   database: 'monolithic',
+// };
+// var connection = mysql.createConnection(conn); // DB 커넥션 생성
+// connection.connect(); // DB 접속
 
-var testQuery =
-  "INSERT INTO `members` (`username`,`password`) VALUES ('test','test');";
+// var testQuery =
+//   "INSERT INTO `members` (`username`,`password`) VALUES ('test','test');";
 
-connection.query(testQuery, function (err, results, fields) {
-  // testQuery 실행
-  if (err) {
-    console.log(err);
-  }
-  console.log(results);
-});
+// connection.query(testQuery, function (err, results, fields) {
+//   // testQuery 실행
+//   if (err) {
+//     console.log(err);
+//   }
+//   console.log(results);
+// });
 
-testQuery = 'SELECT * FROM MEMBERS';
+// testQuery = 'SELECT * FROM MEMBERS';
 
-connection.query(testQuery, function (err, results, fields) {
-  // testQuery 실행
-  if (err) {
-    console.log(err);
-  }
-  console.log(results);
-});
-
-connection.end(); // DB 접속 종료
+// connection.end(); // DB 접속 종료
 
 app.use(express.json()); //json 형식의 데이터를 처리할 수 있도록
 app.use(cors()); // cors 적용하면 모든 브라우자에서 서버에 요청가능
